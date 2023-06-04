@@ -4,6 +4,9 @@
 #
 # @example
 #   include stfs_windefender
-class stfs_windefender {
+class stfs_windefender(
+  Hash $registry_keys,
+  Hash $registry,
+) {
   include stfs_windefender::windefender
 }

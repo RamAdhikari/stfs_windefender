@@ -4,10 +4,7 @@
 #
 # @example
 #   include stfs_windefender::windefender
-class stfs_windefender::windefender (
-  Hash $registry_keys,
-  Hash $registry,
-)
+class stfs_windefender::windefender
 {
   notify {"Key ${key} and ${properties}":}
   $all_keys=$registry_keys

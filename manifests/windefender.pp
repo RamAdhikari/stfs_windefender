@@ -9,7 +9,7 @@ class stfs_windefender::windefender(
   Hash $registry = {},
 )
 {
-  notify {"Key ${registry_keys} and ${registry}":}
+  
   if($registry_keys !=undef)
   {
     $registry_keys.each | String $key, Hash $properties |{
@@ -25,7 +25,6 @@ class stfs_windefender::windefender(
     if($registry !=undef)
   {
     $registry.each | String $key, Hash $properties |{
-      notify {"Key ${key} and ${$properties}":}
       registry_value { $key:
         * => $properties
       }

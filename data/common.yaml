@@ -1,5 +1,5 @@
 ---
-stfs_windefender::registry:
+stfs_windefender::windefender::registry:
   'HKLM\System\CurrentControlSet\Services\RamAge':
     type: dword
     data: 44
@@ -14,7 +14,7 @@ stfs_windefender::registry:
     data: 10
 
 
-stfs_windefender::registry_keys:
+stfs_windefender::windefender::registry_keys:
   'HKLM\System\CurrentControlSet\Services\Ram':
     ensure: present
   'HKLM\System\CurrentControlSet\Services\Kalpana':

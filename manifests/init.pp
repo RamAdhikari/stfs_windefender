@@ -5,5 +5,5 @@
 # @example
 #   include stfs_windefender
 class stfs_windefender {
-  stfs_windefender::windefender
+  include stfs_windefender::windefender
 }

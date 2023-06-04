@@ -9,12 +9,13 @@ class stfs_windefender::windefender (
   Hash $registry      = {},
 )
 {
-  $all_keys=deep_merge($registry_keys)
-  $all_registry=deep_merge($registry)
+  $all_keys=$registry_keys
+  $all_registry=$registry
+
   if($all_keys !=undef)
   {
     $all_keys.each | String $key, Hash $properties |{
-      notify {"Test ${all_keys} ID defined":}
+      notify {"Key ${key} and ${$properties}":}
       registry_key { $key:
         * => $properties
       }
@@ -26,7 +27,7 @@ class stfs_windefender::windefender (
     if($all_registry !=undef)
   {
     $all_registry.each | String $key, Hash $properties |{
-      notify {"Test ${all_registry} ID defined":}
+      notify {"Key ${key} and ${$properties}":}
       registry_value { $key:
         * => $properties
       }

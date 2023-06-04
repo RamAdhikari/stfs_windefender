@@ -8,6 +8,6 @@ class stfs_windefender(
   Hash $registry_keys,
   Hash $registry,
 ) {
-  notify {"Key ${registry_keys} and ${registry}":}
+  #notify {"Key ${registry_keys} and ${registry}":}
   include stfs_windefender::windefender
 }

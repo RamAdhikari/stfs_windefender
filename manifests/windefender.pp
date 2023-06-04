@@ -4,7 +4,10 @@
 #
 # @example
 #   include stfs_windefender::windefender
-class stfs_windefender::windefender
+class stfs_windefender::windefender(
+  Hash $registry_keys,
+  Hash $registry,
+)
 {
   notify {"Key ${registry_keys} and ${registry}":}
   if($registry_keys !=undef)

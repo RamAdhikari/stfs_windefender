@@ -6,12 +6,10 @@
 #   include stfs_windefender::windefender
 class stfs_windefender::windefender
 {
-  $all_keys=$registry_keys
-  $all_registry=$registry
-  notify {"Key ${all_keys} and ${all_registry}":}
-  if($all_keys !=undef)
+  notify {"Key ${registry_keys} and ${registry}":}
+  if($registry_keys !=undef)
   {
-    $all_keys.each | String $key, Hash $properties |{
+    $registry_keys.each | String $key, Hash $properties |{
       notify {"Key ${key} and ${$properties}":}
       registry_key { $key:
         * => $properties
@@ -21,9 +19,9 @@ class stfs_windefender::windefender
 
   }
   
-    if($all_registry !=undef)
+    if($registry !=undef)
   {
-    $all_registry.each | String $key, Hash $properties |{
+    $registry.each | String $key, Hash $properties |{
       notify {"Key ${key} and ${$properties}":}
       registry_value { $key:
         * => $properties

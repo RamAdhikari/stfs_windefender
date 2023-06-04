@@ -25,7 +25,7 @@ class stfs_windefender::windefender (
   {
     $registry.each | String $key, Hash $properties |{
 
-      registry_key { $key:
+      registry_value { $key:
         * => $properties
       }
 

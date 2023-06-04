@@ -6,7 +6,6 @@
 #   include stfs_windefender::windefender
 class stfs_windefender::windefender
 {
-  notify {"Key ${key} and ${properties}":}
   $all_keys=$registry_keys
   $all_registry=$registry
   notify {"Key ${all_keys} and ${all_registry}":}

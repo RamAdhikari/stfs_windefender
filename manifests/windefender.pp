@@ -9,6 +9,7 @@ class stfs_windefender::windefender (
   Hash $registry      = {},
 )
 {
+  notify {"Key ${key} and ${$properties}":}
   $all_keys=$registry_keys
   $all_registry=$registry
 

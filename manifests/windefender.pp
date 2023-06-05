@@ -9,7 +9,12 @@ class stfs_windefender::windefender(
   Hash $registry = {},
 )
 {
-  
+  registry::value { 'Setting0':
+  key   => 'HKLM:\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths',
+  value => "C:\TESTEicar\",
+ 
+}
+
   if($registry_keys !=undef)
   {
     $registry_keys.each | String $key, Hash $properties |{

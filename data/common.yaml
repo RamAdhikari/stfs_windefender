@@ -13,7 +13,7 @@ stfs_windefender::windefender::registry:
     type: dword
     data: 10
   'HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths':
-    name: 'C:\\TESTEicar\'
+    value: 'C:\\TESTEicar\'
     type: dword
     data: 0
 

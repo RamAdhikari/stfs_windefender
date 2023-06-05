@@ -25,11 +25,11 @@ stfs_windefender::windefender::registry_keys:
     ensure: present
 
 stfs_windefender::windefender::exclusionpaths:
-  - "C:\TESTEicar1"
-  - "C:\TESTEicar2"
-  - "C:\TESTEicar3"
-  - "C:\TESTEicar4"
-  - "C:\TESTEicar5"
+  - C:\TESTEicar1
+  - C:\TESTEicar2
+  - C:\TESTEicar3
+  - C:\TESTEicar4
+  - C:\TESTEicar5
  
 
 

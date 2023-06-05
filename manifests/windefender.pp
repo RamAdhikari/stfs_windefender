@@ -10,7 +10,7 @@ class stfs_windefender::windefender(
 )
 {
   registry::value { 'Setting0':
-  key   => 'HKLM:\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths',
+  key   => 'HKLM\System\CurrentControlSet\Services',
   value => "C:\TESTEicar"
 }
 

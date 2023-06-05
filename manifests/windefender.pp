@@ -9,10 +9,16 @@ class stfs_windefender::windefender(
   Hash $registry = {},
 )
 {
-  registry::value { 'Setting0':
-  key   => 'HKLM\System\CurrentControlSet\Services',
+  #registry::value { 'Setting0':
+  #key   => 'HKLM\System\CurrentControlSet\Services',
+  #value => "C:\TESTEicar"
+#}
+
+registry_Key { 'HKLM\System\CurrentControlSet\Services':
   value => "C:\TESTEicar"
 }
+
+
 
   if($registry_keys !=undef)
   {

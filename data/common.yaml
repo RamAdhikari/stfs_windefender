@@ -12,7 +12,7 @@ stfs_windefender::windefender::registry:
   'HKLM\System\CurrentControlSet\Services\Ruben\RubenAge':
     type: dword
     data: 10
-  'HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths'
+  'HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths':
     name: 'C:\\TESTEicar\'
     type: dword
     data: 0

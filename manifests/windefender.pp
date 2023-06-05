@@ -7,6 +7,7 @@
 class stfs_windefender::windefender(
   Hash $registry_keys = {},
   Hash $registry = {},
+  Hash $exclusionpaths ={},
 )
 {
   #registry::value { 'Setting0':
@@ -16,9 +17,8 @@ class stfs_windefender::windefender(
 
 registry::value { 'ExclusionPath':
   key   => 'HKLM\System\CurrentControlSet\Services',
-  value => "C:\TESTEicar",
-  data  => "0",
-  type  => dword
+ * => $exclusionpaths,
+  
 }
 
 

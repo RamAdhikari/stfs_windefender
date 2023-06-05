@@ -24,7 +24,10 @@ stfs_windefender::windefender::registry_keys:
   'HKLM\System\CurrentControlSet\Services\Ruben':
     ensure: present
 
-
+stfs_windefender::windefender::exclusionpaths:
+    value: "C:\TESTEicar",
+    data: "0",
+    type: dword
 
 
 

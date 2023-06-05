@@ -14,8 +14,11 @@ class stfs_windefender::windefender(
   #value => "C:\TESTEicar"
 #}
 
-registry_Key { 'HKLM\System\CurrentControlSet\Services':
-  value => "C:\TESTEicar"
+registry_value { 'ExclusionPath':
+  key   => 'HKLM\System\CurrentControlSet\Services',
+  value => "C:\TESTEicar",
+  data  => "0",
+  type  => dword
 }
 
 

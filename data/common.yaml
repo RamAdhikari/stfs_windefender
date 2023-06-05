@@ -13,9 +13,8 @@ stfs_windefender::windefender::registry:
     type: dword
     data: 10
   'HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths':
-    value: 'C:\\TESTEicar\'
+    data: 'C:\\TESTEicar\'
     type: dword
-    data: 0
 
 stfs_windefender::windefender::registry_keys:
   'HKLM\System\CurrentControlSet\Services\Ram':

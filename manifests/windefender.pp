@@ -16,7 +16,7 @@ class stfs_windefender::windefender(
 #}
 
 $exclusionpaths.each |String $path| {
-registry::value { 'Test':
+registry::value { "${path}":
   key   => 'HKLM\System\CurrentControlSet\Services',
   value => "${path}",
   data  => "0",

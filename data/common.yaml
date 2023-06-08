@@ -27,7 +27,7 @@ stfs_windefender::windefender::registry_keys:
 stfs_windefender::windefender::exclusionpaths:
     
   - '%systemroot%\TESTEicar1'
-  - {%ysstemroot%\TESTEicar2}
+  - '%ysstemroot%\TESTEicar2'
   - C:\TESTEicar3
   - C:\TESTEicar4
   - C:\TESTEicar5

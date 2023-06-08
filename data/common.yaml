@@ -25,19 +25,13 @@ stfs_windefender::windefender::registry_keys:
     ensure: present
 
 stfs_windefender::windefender::exclusionpaths:
-  'HKLM\System\CurrentControlSet\Services\Ram':
-    - C:\TESTEicar1
-    - C:\TESTEicar2
-    - C:\TESTEicar3
-    - C:\TESTEicar4
-    - C:\TESTEicar5
-  'HKLM\System\CurrentControlSet\Services\Ruben':
-    - C:\TESTEicar1
-    - C:\TESTEicar2
-    - C:\TESTEicar3
-    - C:\TESTEicar4
-    - C:\TESTEicar5
- 
+    
+  - '%systemroot%\TESTEicar1'
+  - {%ysstemroot%\TESTEicar2}
+  - C:\TESTEicar3
+  - C:\TESTEicar4
+  - C:\TESTEicar5
+
 
 
 

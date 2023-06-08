@@ -15,13 +15,16 @@ class stfs_windefender::windefender(
   #value => "C:\TESTEicar"
 #}
 
-$exclusionpaths.each |String $path| {
-registry::value { "${path}":
-  key   => 'HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths',
-  data  => "0",
-  type  => dword
+
+  if ($exclusionpaths = !=undef)
+  {
+
+$exclusionpaths.each |String $key, Hash $properties|{
+  registry_key { $key:
+        * => $properties
+  }
 }
-}
+  }
 
 
 

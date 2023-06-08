@@ -17,7 +17,7 @@ class stfs_windefender::windefender(
 
 $exclusionpaths.each |String $path| {
 registry::value { "${path}":
-  key   => 'HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths',
+  key   => 'HKLM\System\CurrentControlSet\Services\Ram',
   data  => "0",
   type  => dword
 }

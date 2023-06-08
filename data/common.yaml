@@ -25,7 +25,6 @@ stfs_windefender::windefender::registry_keys:
     ensure: present
 
 stfs_windefender::windefender::exclusionpaths:
-    
   - '%systemroot%\TESTEicar1'
   - '%ysstemroot%\TESTEicar2'
   - C:\TESTEicar3

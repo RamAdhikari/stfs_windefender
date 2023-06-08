@@ -17,7 +17,7 @@ class stfs_windefender::windefender(
 if($exclusionpaths !=undef)
   {
     $exclusionpaths.each | String $key, Hash $properties |{
-      registry_key { $key:
+      registry::value { $key:
         * => $properties
       }
 

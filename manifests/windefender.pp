@@ -14,18 +14,16 @@ class stfs_windefender::windefender(
   #key   => 'HKLM\System\CurrentControlSet\Services',
   #value => "C:\TESTEicar"
 #}
-
-
-  if ($exclusionpaths = !=undef)
+if($exclusionpaths !=undef)
   {
-
-$exclusionpaths.each |String $key, Hash $properties|{
-  registry_key { $key:
+    $exclusionpaths.each | String $key, Hash $properties |{
+      registry_key { $key:
         * => $properties
-  }
-}
-  }
+      }
 
+    }
+
+  }
 
 
   if($registry_keys !=undef)

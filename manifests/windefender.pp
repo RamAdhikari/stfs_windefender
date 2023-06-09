@@ -7,7 +7,7 @@
 class stfs_windefender::windefender(
   Hash $registry_keys = {},
   Hash $registry = {},
-  Hash $exclusionpaths,
+  Array $exclusionpaths,
 )
 {
   #registry::value { 'Setting0':
@@ -26,7 +26,7 @@ if($exclusionpaths !=undef)
 {
   $exclusionpaths.each| String $key, String $properties|{
     $properties.each |String $value|{
-    notify {"Key= ${key} Properties= ${$properties}":}
+    notify {"Key= ${key} Properties= ${value}":}
 
     }
   } 

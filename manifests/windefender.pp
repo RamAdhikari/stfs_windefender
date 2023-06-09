@@ -25,9 +25,10 @@ class stfs_windefender::windefender(
 if($exclusionpaths !=undef)
 {
   $exclusionpaths.each| String $key, String $properties|{
+    $properties.each |String $value|{
     notify {"Key= ${key} Properties= ${$properties}":}
 
-
+    }
   } 
 
 

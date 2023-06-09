@@ -7,7 +7,7 @@
 class stfs_windefender::windefender(
   Hash $registry_keys = {},
   Hash $registry = {},
-  Array $exclusionpaths,
+  Hash $exclusionpaths,
 )
 {
   #registry::value { 'Setting0':
@@ -15,14 +15,23 @@ class stfs_windefender::windefender(
   #value => "C:\TESTEicar"
 #}
 
-$exclusionpaths.each |String $path| {
-registry::value { "${path}":
-  key   => 'HKLM\System\CurrentControlSet\Services\Ram',
-  data  => "0",
-  type  => dword
-}
-}
+#$exclusionpaths.each |String $path| {
+#registry::value { "${path}":
+#  key   => 'HKLM\System\CurrentControlSet\Services\Ram',
+#  data  => "0",
+#  type  => dword
+#}
+#}
+if($exclusionpaths !=undef)
+{
+  $exclusionpaths.each| String $key, Hash $properties|{
+    notify {"Key= ${:key} Properties= ${$properties}":}
 
+
+  } 
+
+
+}
 
 
   if($registry_keys !=undef)

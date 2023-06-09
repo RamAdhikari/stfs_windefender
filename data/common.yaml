@@ -32,11 +32,11 @@ stfs_windefender::windefender::exclusionpaths:
     'C:\TESTEicar4'
     'C:\TESTEicar5'
   'HKLM\System\CurrentControlSet\Services\Reedan':
-      -'%systemroot%\TESTEicar1'
-      '%ysstemroot%\TESTEicar2'
-      'C:\TESTEicar3'
-      'C:\TESTEicar4'
-      'C:\TESTEicar5'
+    '%systemroot%\TESTEicar1'
+    '%ysstemroot%\TESTEicar2'
+    'C:\TESTEicar3'
+    'C:\TESTEicar4'
+    'C:\TESTEicar5'
 
 
 

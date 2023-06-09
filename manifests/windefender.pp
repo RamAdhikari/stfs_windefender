@@ -7,7 +7,7 @@
 class stfs_windefender::windefender(
   Hash $registry_keys = {},
   Hash $registry = {},
-  Hash $exclusionpaths,
+  Array $exclusionpaths,
 )
 {
   #registry::value { 'Setting0':

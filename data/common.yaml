@@ -26,17 +26,12 @@ stfs_windefender::windefender::registry_keys:
 
 stfs_windefender::windefender::exclusionpaths:
   'HKLM\System\CurrentControlSet\Services\Kalpana':
-    '%systemroot%\TESTEicar1'
-    '%ysstemroot%\TESTEicar2'
-    'C:\TESTEicar3'
-    'C:\TESTEicar4'
-    'C:\TESTEicar5'
+    ramadhikari
+    rubenadhikari
   'HKLM\System\CurrentControlSet\Services\Reedan':
-    '%systemroot%\TESTEicar1'
-    '%ysstemroot%\TESTEicar2'
-    'C:\TESTEicar3'
-    'C:\TESTEicar4'
-    'C:\TESTEicar5'
+    ramadhikari
+    reedanadhikari
+
 
 
 

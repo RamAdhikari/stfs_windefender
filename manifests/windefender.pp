@@ -26,13 +26,12 @@ if($exclusionpaths !=undef)
 {
   $exclusionpaths.each| String $key, String $values|{
   
-    registry_key { $key:
+   
       $values.each| String $value|{
-      key   => $value,
-      data  => "0",
-      type  => string
+      g
+      
       }
-      }
+  }
 
     
   } 

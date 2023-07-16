@@ -13,7 +13,7 @@ class stfs_windefender::windefender(
   #registry::value { 'Setting0':
   #key   => 'HKLM\System\CurrentControlSet\Services',
   #value => "C:\TESTEicar"
-#}
+#} Test Test
 #Test merge
 #$exclusionpaths.each |String $path| {
 #registry::value { "${path}":

@@ -23,30 +23,4 @@ class stfs_windefender::windefender(
 #}
 #}
 
-
-
-}
-
-
-  if($registry_keys !=undef)
-  {
-    $registry_keys.each | String $key, Hash $properties |{
-      registry_key { $key:
-        * => $properties
-      }
-
-    }
-
-  }
-  
-    if($registry !=undef)
-  {
-    $registry.each | String $key, Hash $properties |{
-      registry_value { $key:
-        * => $properties
-      }
-
-    }
-
-  }
 }

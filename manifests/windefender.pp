@@ -22,19 +22,7 @@ class stfs_windefender::windefender(
 #  type  => dword
 #}
 #}
-if($exclusionpaths !=undef)
-{
-  $exclusionpaths.each| String $key, String $values|{
-  
-   
-      $values.each| String $value|{
-      g
-      
-      }
-  }
 
-    
-  } 
 
 
 }

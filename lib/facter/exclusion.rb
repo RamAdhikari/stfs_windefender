@@ -1,17 +1,11 @@
-osfamily = Facter.value('osfamily')
-case osfamily
-when 'windows'
-  Facter.add('custom_fact') do
+Facter.add(:notepadpp) do
+    confine :kernel => :windows # restricts module to windows
     setcode do
+      require 'facter/util/registry'
       begin
-        value = nil
-        Win32::Registry::HKEY_LOCAL_MACHINE.open('SOFTWARE\ServerInfo') do |regkey|
-          value = regkey['value_name'].downcase
-        end
-        value
+        Facter::Util::Registry.hklm_read('SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Notepad++', 'DisplayVersion')
       rescue
         nil
       end
     end
-  end
 end
